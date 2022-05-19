@@ -8,3 +8,5 @@ If the end page value is invalid or not specified, then the program reads the co
 Two python libraries were imported to implement this part:
   1. [pyPDF2](https://pypi.org/project/PyPDF2/)   ->  Was used to count the number of pages
   2. [pdfplumber](https://medium.com/analytics-vidhya/how-to-easily-extract-text-from-any-pdf-with-python-fc6efd1dedbe)   ->  Was used to extract the text from each page
+
+> Note: When the extracted text is read out, it seems to put a pause upon encountering a newline. This is not needed as we apply pause only when encountering punctuation marks. So before sending the text to pyttsx3, the newline character (\n) is replaced by white spaces using the replace method.
