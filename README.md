@@ -1,5 +1,5 @@
-# pdf_to_audiobook
-_A project to convert pdf file to audio book._
+# Read the text
+This part reads the text extracted from the pdf.
 
-User enters the file name with relative path, as well as the starting and ending page numbers. Then the program displays the text on each page as well as reads it along.
+Library imported - pyttsx3
 
