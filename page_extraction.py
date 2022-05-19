@@ -2,13 +2,11 @@
 
 import pdfplumber
 import PyPDF2
-# The files above ☝️ are needed to extract pages from pdf
+# ☝️ The libraries above are needed to extract pages from pdf
 import audio
-# ☝ This is the module to read extracted text
+# ☝ This is the module created by me to read extracted text
 
 # ************** Function to get the total pages in the pdf **********************
-
-
 def extract_page_no(file_name):
     """
     Returns the number of pages in the pdf file \n
@@ -21,13 +19,12 @@ def extract_page_no(file_name):
     return pages
 # ***************** Function ends here *************************
 
-# ****************** Function to extract text from each page of pdf **********************
-
+# ****************** Function to extract text from each page of pdf **************************
 def extract_page(file_name, start, end):
     """
     Function extracts the text in the pdf "file_name", starting from page number "start" to page number "end".\n
-    :param file_name: name of the pdf file, including file path
-    :param start: page number of first page to be extracted
+    :param file_name: relative path of the required pdf file.
+    :param start: page number of first page to be extracted.
     :param end: page number of last page to be extracted.
     :return: None
     """
