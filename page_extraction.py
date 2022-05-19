@@ -33,9 +33,10 @@ def extract_page(file_name, start, end):
     except ValueError:
         end_pg = extract_page_no(file_name)     # The total pages in pdf is calculated and store in 'end_pg' variable
 
-    with pdfplumber.open(file_name) as pdf:     # Extracting pages from pdf
+        with pdfplumber.open(file_name) as pdf:     # Extracting pages from pdf
         for pages in pdf.pages[start-1: end_pg]:
-            print(pages.extract_text())         # After extraction the text is printed
-            audio.audio(pages.extract_text())   # The audio module is called here
+            text = pages.extract_text()
+            print(text)         # After extraction the text is printed
+            audio.audio(text.replace('\n', ' '))   # The audio module is called here. The newline character (\n) is replaced by white space because pyttsx3 pauses upon seeing a newline character, which is not required.
 
 # ****************** Function ends here ********************************
