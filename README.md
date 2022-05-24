@@ -17,7 +17,7 @@ User enters the file name with relative path, as well as the starting and ending
      * pyPDF2
      * pyttsx3
  
- 4. Then run the main.py file from terminal using command `python3 main.py`.
+ 4. Then run the main.py file from terminal using command `python3 main.py` or `python main.py` as per Operating System.
  5. Follow the instructions as displayed during program run
  6. That's it!!! PDF is converted to audiobook🥳🥳
 
