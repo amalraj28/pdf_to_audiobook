@@ -13,9 +13,9 @@ def extract_page_no(file_name):
     :param file_name: Name of pdf file, including path
     :return: Number of pages in the pdf
     """
-    file = open(file_name, 'rb')
-    pages = PyPDF2.PdfFileReader(file).numPages
-    file.close()
+    with open(file_name, 'rb') as file:
+        pages = PyPDF2.PdfReader(file).pages.__len__()
+    
     return pages
 # ***************** Function ends here *************************
 
